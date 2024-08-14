@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web con Express.js</title>
+    <title>Buscador de Películas</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <h1 style="text-align: center;">¡Hola, Mundo!</h1>
-    <p style="text-align: center;">Esta es mi página web creada con Express.js, JavaScript y HTML.</p>
-    <form action="/buscar" method="get" style="text-align: center;">
-        <input type="search" name="query" placeholder="Buscar..." aria-label="Buscar" style="text-align: center;">
-        <button type="submit" style="text-align: center;">Buscar</button>
+    <h1>Buscador de Películas</h1>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Buscar películas..." />
+        <button type="submit">Buscar</button>
     </form>
+    <div id="movieResults"></div>
+
+    <script>
+        const searchForm = document.getElementById('searchForm');
+        const searchInput = document.getElementById('searchInput');
+        const movieResults = document.getElementById('movieResults');
+
+        searchForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const query = searchInput.value;
+            const response = await fetch(`/buscar?query=${encodeURIComponent(query)}`);
+            const movies = await response.json();
+
+            movieResults.innerHTML = '';
+            movies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('movie');
+                movieDiv.innerHTML = `<h3>${movie.title}</h3><p>${movie.description}</p>`;
+                movieResults.appendChild(movieDiv);
+            });
+        });
+    </script>
 </body>
 </html>
