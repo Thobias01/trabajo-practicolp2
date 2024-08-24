@@ -16,14 +16,14 @@ const movies = [
     image: 'https://i.pinimg.com/564x/8f/28/37/8f2837e6778bc3c8309f7a0f9573b4a2.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'Spider Man ', 
+    description: 'Luego de sufrir la picadura de una araña genéticamente modificada, un estudiante de secundaria tímido y torpe adquiere increíbles capacidades como arácnido. Pronto comprenderá que su misión es utilizarlas para luchar contra el mal y defender a sus vecinos.',
+    image: 'https://i.pinimg.com/564x/8d/10/b5/8d10b5c81208945c2837ded766697d71.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'Rambo', 
+    description: 'John Rambo es un veterano boina verde que luchó en Vietnam. Un día va a visitar a un viejo amigo del ejército pero se entera de que ha muerto. Algunos días después, la policía lo detiene por vagabundo y se enseña con él. En ese momento, John recuerda los terrores y las torturas que sufrió durante la guerra de Vietnam y reacciona violentamente.',
+    image: 'https://i.pinimg.com/564x/7e/ee/7d/7eee7df2ab588c565b67db04d0d8e956.jpg' 
   },
   { 
     title: '', 
