@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Películas</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Buscador de Películas</h1>
@@ -22,18 +22,39 @@
         searchForm.addEventListener('submit', async (event) => {
             event.preventDefault();
             
-            const query = searchInput.value;
-            const response = await fetch(`/buscar?query=${encodeURIComponent(query)}`);
-            const movies = await response.json();
+            const query = searchInput.value.trim();
+            if (!query) {
+                movieResults.innerHTML = '<p>Por favor ingrese un término de búsqueda.</p>';
+                return;
+            }
 
-            movieResults.innerHTML = '';
-            movies.forEach(movie => {
-                const movieDiv = document.createElement('div');
-                movieDiv.classList.add('movie');
-                movieDiv.innerHTML = `<h3>${movie.title}</h3><p>${movie.description}</p>`;
-                movieResults.appendChild(movieDiv);
-            });
+            try {
+                const response = await fetch(`/buscar?query=${encodeURIComponent(query)}`);
+                if (!response.ok) {
+                    throw new Error('No se pudieron obtener los resultados.');
+                }
+                const movies = await response.json();
+                movieResults.innerHTML = '';
+
+                if (movies.length === 0) {
+                    movieResults.innerHTML = '<p>No se encontraron películas.</p>';
+                } else {
+                    movies.forEach(movie => {
+                        const movieDiv = document.createElement('div');
+                        movieDiv.classList.add('movie');
+                        movieDiv.innerHTML = `
+                            <h3>${movie.title}</h3>
+                            <img src="${movie.image}" alt="${movie.title}" style="width: 200px; height: auto;" />
+                            <p>${movie.description}</p>
+                        `;
+                        movieResults.appendChild(movieDiv);
+                    });
+                }
+            } catch (error) {
+                movieResults.innerHTML = `<p>Error: ${error.message}</p>`;
+            }
         });
     </script>
 </body>
 </html>
+

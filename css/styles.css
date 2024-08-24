@@ -25,14 +25,14 @@ form {
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #28a745;
+    background-color: #0025c9;
     color: white;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #0025c9;
 }
 
 #movieResults {
