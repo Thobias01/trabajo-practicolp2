@@ -26,19 +26,19 @@ const movies = [
     image: 'https://i.pinimg.com/564x/7e/ee/7d/7eee7df2ab588c565b67db04d0d8e956.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'Deadpool', 
+    description: 'Wade Wilson, tras ser sometido a un cruel experimento científico, adquiere poderes especiales que le convierten en Deadpool. Armado con sus nuevas habilidades y un retorcido sentido del humor tratará de dar caza al hombre que casi destruye su vida.',
+    image: 'https://i.pinimg.com/564x/e5/a1/f4/e5a1f46df06224b572fd3ee3451244b4.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'Predator', 
+    description: 'Un grupo de mercenarios es contratado por la CIA para rescatar a unos pilotos que han sido apresados por la guerrilla en la selva centroamericana.',
+    image: 'https://i.pinimg.com/564x/f9/1e/62/f91e62e0c852bf4191868c09f8dc52d4.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'El aro', 
+    description: 'Tras visionar una cinta de vídeo con perturbadoras imágenes recibes una llamada que anuncia tu muerte. Siete días después, la profecía se cumple.',
+    image: 'https://i.pinimg.com/564x/91/f5/1d/91f51d14bc8e621ca9e1ee846f3d437e.jpg' 
   },
   { 
     title: '', 
