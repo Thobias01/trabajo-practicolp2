@@ -54,7 +54,8 @@ const movies = [
     title: 'El abogado del diablo', 
     description: 'Un joven abogado que nunca ha perdido un juicio es invitado por un poderoso despacho de abogados en Nueva York para seleccionar un jurado.',
     image: 'https://i.pinimg.com/564x/7e/a9/92/7ea99261813fb6bf93266b901e9665e8.jpg' 
-  }
+  }  
+
 ];
 
 app.use(express.static(path.join(__dirname)));
