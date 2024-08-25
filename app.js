@@ -41,14 +41,9 @@ const movies = [
     image: 'https://i.pinimg.com/564x/91/f5/1d/91f51d14bc8e621ca9e1ee846f3d437e.jpg' 
   },
   { 
-    title: '', 
-    description: '',
-    image: '' 
-  },
-  { 
-    title: '', 
-    description: '',
-    image: '' 
+    title: 'After', 
+    description: 'el amor de Tessa (Josephine Langford) y Hardin (Hero Fiennes Tiffin) nunca ha sido fácil. Mientras él permanece en Londres después de la boda de su madre y se hunde cada vez más en su propia oscuridad, ella regresa a Seattle. Tessa es la única capaz de entenderle y calmarle... él la necesita, pero ella ya no es la chica buena y dulce que era cuando llegó a la universidad. Deberá plantearse si lo que debe hacer ahora es salvar a Hardin y su relación con él, o si ha llegado el momento de pensar solo en ella. Si quieren que su amor sobreviva, primero tendrán que trabajar en sí mismos.',
+    image: 'https://i.pinimg.com/564x/fb/f0/8a/fbf08a0985e9a26cf7f36ec5a89213d8.jpg' 
   },
   { 
     title: 'Matrix', 
